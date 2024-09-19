@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\poc-dependency-injection.Infra.IoC\poc-dependency-injection.Infra.IoC.csproj" />
   </ItemGroup>
 
 </Project>

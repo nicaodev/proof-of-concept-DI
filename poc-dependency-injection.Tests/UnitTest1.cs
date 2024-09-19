@@ -5,7 +5,6 @@ namespace poc_dependency_injection.Tests
         [Fact]
         public void Test1()
         {
-
         }
     }
 }

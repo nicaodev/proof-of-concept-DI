@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\poc-dependency-injection.Domain\poc-dependency-injection.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

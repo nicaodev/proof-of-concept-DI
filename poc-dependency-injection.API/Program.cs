@@ -1,7 +1,10 @@
+using poc_dependency_injection.Infra.IoC;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+DependencyInjection.AddDependencyInjection(builder.Services, builder.Configuration);
 
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
