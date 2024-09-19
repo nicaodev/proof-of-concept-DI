@@ -16,7 +16,11 @@ namespace poc_dependency_injection.Application.Services
 
         public string GetDescription()
         {
-            return @"Temporário, passageiro como tradução literal. Será criada uma nova instância do objeto toda vez que fizer uma requisição. Mas, uma vez que eles são criados, eles usarão mais memória e recursos, e podem ter o impacto negativo no desempenho. Então use para o serviço leve com pouco ou nenhum estado.";
+            return @"O serviço é recriado toda vez que solicitado, mesmo dentro da mesma requisição.
+                     Uso recomendado: Ideal para serviços leves e sem estado, como:
+                     Validações: Que não precisam manter estado entre chamadas.
+                     Utilitários: Operações como formatação ou cálculos rápidos.
+                     Desempenho: O uso excessivo de serviços Transient pode impactar o desempenho devido à criação constante de instâncias, especialmente em serviços pesados.";
         }
 
         public async Task<BaseResultModel> GetResult()

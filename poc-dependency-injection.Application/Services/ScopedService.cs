@@ -16,8 +16,8 @@ namespace poc_dependency_injection.Application.Services
 
         public string GetDescription()
         {
-            return @"Uma instância é criada uma vez por escopo. Um escopo é criado em cada solicitação para o aplicativo (cada pedido é um escopo), portanto,
-                    todos os componentes registrados como scoped serão criados uma vez por solicitação.";
+            return @"Uma nova instância do serviço é criada para cada requisição HTTP ou escopo definido, e é descartada ao fim da requisição.
+                    Uso recomendado: Serviços que precisam manter estado durante uma requisição, mas não além dela. Exemplos: Contexto de banco de dados: O DbContext é criado por requisição para garantir consistência durante a operação. Serviços temporários: Como o carrinho de compras, que precisa de persistência de estado durante o processamento. Escopos personalizados: Permitem definir ciclos de vida customizados para operações que não são baseadas em HTTP.";
         }
 
         public async Task<BaseResultModel> GetResult()

@@ -16,8 +16,8 @@ namespace poc_dependency_injection.Application.Services
 
         public string GetDescription()
         {
-            return @"Significa que apenas uma única instância será criada. Essa instância é compartilhada entre todos os componentes que exigem isso. A mesma instância é, portanto, usada sempre.
-                    Onde você precisa reutilizar o serviço em várias pontas de sua aplicação como por exemplo: configurações do aplicativo ou parâmetros, serviço de log, armazenamento em cache de dados.";
+            return @"No ciclo de vida Singleton, apenas uma instância do serviço é criada e compartilhada por toda a aplicação. Ela é reutilizada sempre que solicitada por qualquer componente.
+                    Uso recomendado: Ideal para serviços que mantêm dados globais ou precisam ser persistidos, como - Configurações: Armazenamento de parâmetros que não mudam durante a execução. Serviços de log: Registro de eventos de forma consistente. Cache de dados: Dados acessados com frequência que precisam ser consistentes. Cuidado: Como é compartilhado, evite armazenar estado mutável para prevenir problemas de concorrência.";
         }
 
         public async Task<BaseResultModel> GetResult()
